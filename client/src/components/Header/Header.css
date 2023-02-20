@@ -1,0 +1,23 @@
+.Logo{
+    margin-left: 15%;
+    height: 55px;
+    padding: 10px;
+}
+.main-logo img{
+    height: 20px;
+}
+.sub-logo img{
+    height: 15px;
+}
+.sub-logo{
+    display: flex;
+    gap: .2rem;
+    align-items: center;
+}
+span{
+   display: flex;
+   align-items: center;   
+}
+plus{
+    color: yellow;
+}
