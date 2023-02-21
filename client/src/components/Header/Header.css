@@ -1,18 +1,17 @@
-.Logo{
-    margin-left: 15%;
-    height: 55px;
-    padding: 10px;
-}
+
 .main-logo img{
     height: 20px;
 }
 .sub-logo img{
-    height: 15px;
+    height: 10px;
 }
 .sub-logo{
     display: flex;
     gap: .2rem;
     align-items: center;
+    font-size: 12px;
+ 
+
 }
 span{
    display: flex;
@@ -20,4 +19,27 @@ span{
 }
 plus{
     color: yellow;
+}
+.search{
+    background-color: aliceblue;
+}
+.Header{
+    display: flex;
+    height: 55px;
+    gap: 2%;
+    padding: 10px;
+    margin-left: 13%;
+    margin-top:10px;
+    
+}
+.search{
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: .3rem;
+    width:30vw;
+}
+.button{
+    display: flex;
 }
