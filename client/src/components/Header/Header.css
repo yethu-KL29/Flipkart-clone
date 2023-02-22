@@ -21,25 +21,39 @@ plus{
     color: yellow;
 }
 .search{
-    background-color: aliceblue;
+    background-color: aliceblue; 
+    align-items: center;
 }
 .Header{
     display: flex;
-    height: 55px;
+    height: 60px; 
+    width: 100vw;
+    align-items: center;
     gap: 2%;
-    padding: 10px;
-    margin-left: 13%;
-    margin-top:10px;
+    margin-left: 17%;
+    
+   
     
 }
 .search{
     height: 2rem;
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-top: .3rem;
     width:30vw;
 }
 .button{
     display: flex;
+    align-items: center;
+    gap: 3vw;
+}
+.cart{
+    display: flex;
+    color: aliceblue;
+}
+.options{
+    display: flex;
+    gap: 3vw;
+    align-items: center;
+    
+    
 }
