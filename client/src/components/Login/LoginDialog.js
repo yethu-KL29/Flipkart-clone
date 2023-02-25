@@ -1,10 +1,13 @@
 import { Dialog } from '@mui/material'
 import React from 'react'
 
-const LoginDialog = () => {
+const LoginDialog = ({open,setopen}) => {
+  const handleClose = () => {
+    setopen(false)
+  }
   return (
     <div>
-        <Dialog open={true}>Hello</Dialog>
+        <Dialog open={open} onClose={handleClose}>Hello</Dialog>
     </div>
   )
 }

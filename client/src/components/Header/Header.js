@@ -29,7 +29,6 @@ const Header = () => {
             
             <Search/>
             <CustomButton/>
-            <LoginDialog/>
             
         </div>
     </Toolbar>
