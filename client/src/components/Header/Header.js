@@ -3,6 +3,7 @@ import { AppBar, Button, Toolbar } from '@mui/material'
 import './Header.css'
 import Search from './Search';
 import CustomButton from './CustomButton';
+import LoginDialog from '../Login/LoginDialog';
 
 const Header = () => {
     const logoURL = 'https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/flipkart-plus_8d85f4.png';
@@ -28,6 +29,7 @@ const Header = () => {
             
             <Search/>
             <CustomButton/>
+            <LoginDialog/>
             
         </div>
     </Toolbar>
