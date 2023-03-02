@@ -9,8 +9,9 @@ width:35vw;
 const Content=styled(Box)`
 display: flex;
 flex-direction: column;
+justify-content: space-between;
 width: 60%;
-padding: 50px 35px;
+padding: 50px 30px;
 `;
 
 const Image=styled(Box)
@@ -19,10 +20,10 @@ const Image=styled(Box)
  width:40%;`;
 
  const Wrapper=styled(Box)`
- display: flex;
+  display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 50px 15px;
+  padding: 50px 10px;
 
  `;
 const LoginButton=styled(Button)`
@@ -32,11 +33,8 @@ text-transform: none;
 height: 48px;
 border-radius: 2px;
 margin-top: 20px;
-display: flex;
-align-items: center;
 width: 75%;
-margin-left: 32px;
-
+align-self: center;
 margin-bottom: 10px;
 `;
 const RequestButton=styled(Button)`
@@ -44,15 +42,21 @@ background-color: #fff;
 color: #2874f0;
 box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
 text-transform: none;
-
 height: 48px;
 border-radius: 2px;
 margin-top: 20px;
 width: 75%;
-margin-left: 30px;
-
+align-self: center;
 margin-bottom: 10px;`;
 
+
+const Writeup=styled(Typography)`
+margin-top: 20px;
+margin-bottom: 20px;
+align-self: center;
+color:blue;
+cursor: pointer;
+`;
 const LoginDialog = ({open,setopen}) => {
   const handleClose = () => {
     setopen(false)
@@ -75,7 +79,7 @@ const LoginDialog = ({open,setopen}) => {
                 <LoginButton >Login</LoginButton>
                 <Typography sx={{textAlign:"center"}}>OR</Typography>
                 <RequestButton>Request OTP</RequestButton>
-                <Typography>New to Flipkart? Create an account</Typography>
+                <Writeup>New to Flipkart? Create an account</Writeup>
 
               </Content>
             </Box>
