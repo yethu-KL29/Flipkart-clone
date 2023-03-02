@@ -4,7 +4,7 @@ import React from 'react'
 
 const Component=styled(Box)`
 height: 60vh;
-width:70vh;
+width:35vw;
 `;
 const Content=styled(Box)`
 display: flex;
@@ -32,8 +32,10 @@ text-transform: none;
 height: 48px;
 border-radius: 2px;
 margin-top: 20px;
-width: 65%;
-margin-left: 26px;
+display: flex;
+align-items: center;
+width: 75%;
+margin-left: 32px;
 
 margin-bottom: 10px;
 `;
@@ -42,11 +44,12 @@ background-color: #fff;
 color: #2874f0;
 box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
 text-transform: none;
+
 height: 48px;
 border-radius: 2px;
 margin-top: 20px;
-width: 65%;
-margin-left: 26px;
+width: 75%;
+margin-left: 30px;
 
 margin-bottom: 10px;`;
 
@@ -56,7 +59,7 @@ const LoginDialog = ({open,setopen}) => {
   }
   return (
   
-      <Dialog open={open} onClose={handleClose} >
+      <Dialog open={open} onClose={handleClose}PaperProps={{sx:{maxWidth:"unset"}}} >
         <Component>
           <Box sx={{display:"flex",height:"100%"}}>
               <Image>
@@ -69,8 +72,8 @@ const LoginDialog = ({open,setopen}) => {
                 <TextField label="Enter Email/Mobile Number" variant="standard" />
                 <TextField label="Enter Password" variant="standard" />
                 <Typography>By continuing, you agree to Flipkart's Terms of Use and Privacy Policy.</Typography>
-                <LoginButton>Login</LoginButton>
-                <Typography>OR</Typography>
+                <LoginButton >Login</LoginButton>
+                <Typography sx={{textAlign:"center"}}>OR</Typography>
                 <RequestButton>Request OTP</RequestButton>
                 <Typography>New to Flipkart? Create an account</Typography>
 
