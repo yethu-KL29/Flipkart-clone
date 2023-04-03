@@ -5,15 +5,19 @@ const cors = require('cors');
 
 
 const productRouter = require('./routers/productRouter');
+const userRouter = require('./routers/userRouter');
 
 const app = express();
 app.use(cors())
 app.use(express.json())
 dotenv.config();
-app.use('/',productRouter);
+
+app.use("/", userRouter);
+app.use('/insert',productRouter);
 
 
 const URL = process.env.URL;
+mongoose.set("strictQuery", false);
  mongoose.connect(URL,{useNewUrlParser:true,useUnifiedTopology:true})
 .then(()=>{
     console.log('Database connected');
