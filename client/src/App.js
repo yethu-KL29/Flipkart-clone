@@ -2,14 +2,17 @@ import { Box } from '@mui/system';
 import React from 'react';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
+import DataProvider from './components/Context/DataProvider';
 function App() {
   return (
-    <div className="App">
+    <DataProvider>
+
       <Header />
-      <Box sx={{marginTop:"65px"}}>
+      <Box sx={{ marginTop: "65px" }}>
         <Home />
       </Box>
-    </div>
+    </DataProvider>
+
   );
 }
 

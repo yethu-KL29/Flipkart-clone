@@ -1,20 +1,22 @@
-import { Button, Tabs ,Tab, IconButton, Typography} from '@mui/material'
-import React from 'react'
+import { Button, Typography } from '@mui/material'
+import React, { useState } from 'react'
+import { useContext } from 'react'
 import "./Header.css"
-import { useState } from 'react';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import { Box } from '@mui/system';
 import LoginDialog from '../Login/LoginDialog';
+import { DataContext } from '../Context/DataProvider';
+import Profile from './Profile';
 const CustomButton = () => {
-
   const [open, setopen] = useState(false)
+  const {user} = useContext(DataContext)
+
   const openDialog = () => {
     setopen(true)
   }
 
   return (
     <div className='button'>
-
+      {user ? <Profile/>: 
       <Button onClick={openDialog} variant='contained'
             sx={{marginLeft:"3vw",
             width:'7vw', 
@@ -23,6 +25,8 @@ const CustomButton = () => {
             backgroundColor:"white", 
             color:"#027cd5"}}
         >Login</Button>
+  }
+        
         <div className='options'>
             <Typography >Become a Seller</Typography>
             <Typography>More</Typography>
@@ -36,4 +40,4 @@ const CustomButton = () => {
   )
 }
 
-export default CustomButton
+export default CustomButton;
