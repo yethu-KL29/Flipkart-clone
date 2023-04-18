@@ -13,7 +13,7 @@ app.use(express.json())
 dotenv.config();
 
 app.use("/", userRouter);
-app.use('/insert',productRouter);
+app.use('/product',productRouter);
 
 
 const URL = process.env.URL;
